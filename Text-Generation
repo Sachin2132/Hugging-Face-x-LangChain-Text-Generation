@@ -1,0 +1,27 @@
+## Libraries Required
+!pip install langchain-huggingface
+## For API Calls
+!pip install huggingface_hub
+!pip install transformers
+!pip install accelerate
+!pip install  bitsandbytes
+!pip install langchain
+
+# Environment secret keys
+from google.colab import userdata
+sec_key=userdata.get("HF_TOKEN")
+print(sec_key)
+
+from langchain_huggingface import HuggingFaceEndpoint
+
+from google.colab import userdata
+sec_key=userdata.get("HUGGINGFACEHUB")
+print(sec_key)
+
+import os
+os.environ["HUGGINGFACEHUB"]=sec_key
+
+repo_id="mistralai/Mistral-7B-Instruct-v0.3"
+llm=HuggingFaceEndpoint(repo_id=repo_id,max_length=128,temperature=0.7,token=sec_key)
+
+llm.invoke("What is machine learning")
