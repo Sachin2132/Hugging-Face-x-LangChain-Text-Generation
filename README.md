@@ -14,3 +14,5 @@ now you need to run the code
 there is two method i provide
 1. By using simple APIs
 2. By using Pipeline
+second method will be provided soon...
+keep coding😊😊😊
