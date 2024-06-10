@@ -11,6 +11,6 @@ first you need to import some necessary library
 
 now you need to run the code
 
-there is two mwthod i provide
+there is two method i provide
 1. By using simple APIs
 2. By using Pipeline
